@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
+import SingIn from "../authontication/SingIn";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
         }
     ]
   },
+  {
+    path: "singIn",
+    element: <SingIn/>,
+  }
 ]);
 
 export default router;
