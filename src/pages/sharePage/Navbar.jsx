@@ -8,7 +8,7 @@ const user = null;
   const navLink = (
     <ul className="flex flex-col lg:flex-row items-center text-sm lg:gap-4 *:cursor-pointer font-semibold">
       <NavItem address="/" label="Home"></NavItem>
-      <NavItem address="/product" label="Products"></NavItem>
+      <NavItem address="/products" label="Products"></NavItem>
       <NavItem address="/categories" label="Categories"></NavItem>
       <NavItem address="/custom" label="Custom"></NavItem>
       <NavItem address="/blog" label="Blog"></NavItem>
@@ -16,7 +16,7 @@ const user = null;
   );
 
   return (
-    <div>
+    <div className="max-w-[1440px] mx-auto lg:w-[85%]">
       <div className="navbar mt-4">
         <div className="navbar-start">
           <div className="dropdown">
