@@ -27,7 +27,7 @@ const SingInWithSocialMedia = () => {
             />
           </svg>
         </div>
-        <span className="ml-1 text-xs">Sign In with Google</span>
+        <span className="ml-1 text-sm">Sign In with Google</span>
       </button>
 
       <button
@@ -67,7 +67,7 @@ const SingInWithSocialMedia = () => {
             </defs>
           </svg>
         </div>
-        <span className="ml-1 text-xs">Sign In with GitHub</span>
+        <span className="ml-1 text-sm">Sign In with GitHub</span>
       </button>
     </div>
   );

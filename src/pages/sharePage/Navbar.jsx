@@ -60,14 +60,14 @@ const user = null;
             </>
           ) : (
             <>
-              <Link to="/login">
+              <Link to="/singIn">
                 <button className="font-bold text-xs ml-3 lg:ml-6 mr-2 py-1 md:py-2 rounded-full px-3 md:px-6 bg-[#1E99F5] transition-all shadow-md duration-300 border-y hover:bg-black text-white">
-                  Login
+                  Sing In
                 </button>
               </Link>
-              <Link to="/register">
+              <Link to="/singUp">
                 <button className="font-bold text-xs py-1 md:py-2 rounded-full px-3 md:px-6 bg-[#1E99F5] transition-all shadow-md duration-300 border-y hover:bg-black text-white">
-                  Register
+                  Sing Up
                 </button>
               </Link>
             </>
