@@ -4,6 +4,7 @@ import SingIn from "../authontication/SingIn";
 import SingUp from "../authontication/SingUp";
 import Products from "../pages/Products/Products";
 import Carts from "../pages/Carts/Carts";
+import NoContent from "../pages/sharePage/NoContent";
 
 
 const router = createBrowserRouter([
@@ -12,12 +13,28 @@ const router = createBrowserRouter([
     element: <Main/> ,
     children: [
         {
+            index: true,
+            element: <NoContent/>
+        },
+        {
             path: "/products",
             element: <Products/>
         },
         {
             path: "/carts",
             element: <Carts/>
+        },
+        {
+            path: "/categories",
+            element: <NoContent/>
+        },
+        {
+            path: "/custom",
+            element: <NoContent/>
+        },
+        {
+            path: "/blog",
+            element: <NoContent/>
         },
 
     ]
