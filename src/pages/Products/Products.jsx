@@ -16,7 +16,7 @@ const Products = () => {
     <div className="border-t mt-5">
       <div className="max-w-[1440px] pt-16 mx-auto lg:w-[85%] flex gap-11">
         {/* category part */}
-        <div className="text-lg w-56 font-semibold pt-9 pr-7 border-r *:w-full *:cursor-pointer">
+        <div className="text-lg w-80 font-semibold pt-9 pr-7 border-r *:w-full *:cursor-pointer">
           {categorys.map((c, idx) => (
             <div key={idx}>
               <h6
