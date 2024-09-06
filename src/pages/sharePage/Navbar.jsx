@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import NavItem from "../../components/NavItem";
 import shop from "../../assets/shop.png";
+import useAuth from "../../Hooks/useAuth";
+import userimg from "../../assets/user.png"
 
 const Navbar = () => {
-  const user = null;
+  const {user} = useAuth();
 
   const navLink = (
     <ul className="flex flex-col lg:flex-row items-center text-sm lg:gap-4 *:cursor-pointer font-semibold">
@@ -52,9 +54,12 @@ const Navbar = () => {
           </Link>
           {user ? (
             <>
-              <div className="avatar cursor-pointer">
-                <div className="w-9  rounded-full">
-                  <img src={user?.photoURL} />
+              <div className="avatar ml-4 cursor-pointer">
+                <div className="w-10  rounded-full">
+                 
+                  {
+                    user?.photoURL ?  <img src={user?.photoURL} /> :  <img src={userimg} />
+                  }
                 </div>
               </div>
             </>

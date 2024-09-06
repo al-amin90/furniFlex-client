@@ -1,0 +1,208 @@
+[
+  {
+    "id": 1,
+    "category": "Rocking chair",
+    "chairName": "Classic Wooden Rocking Chair",
+    "price": 199.99,
+    "discountPrice": 159.99,
+    "discountPercent": 20,
+    "description": "A beautifully crafted wooden rocking chair with a smooth gliding motion, perfect for relaxing.",
+    "image": "https://i.ibb.co.com/z4RRCvP/Frame-4.png"
+  },
+  {
+    "id": 4,
+    "category": "Rocking chair",
+    "chairName": "Vintage Rocking Chair",
+    "price": 299.99,
+    "discountPrice": 249.99,
+    "discountPercent": 17,
+    "description": "A vintage-style rocking chair with ornate carvings and a comfortable seating experience.",
+    "image": "https://i.ibb.co.com/L09JvBn/image-149.png"
+  },
+  {
+    "id": 7,
+    "category": "Rocking chair",
+    "chairName": "Contemporary Rocking Chair",
+    "price": 249.99,
+    "discountPrice": 209.99,
+    "discountPercent": 16,
+    "description": "A modern design rocking chair with a sleek frame and ergonomic seating.",
+    "image": "https://i.ibb.co.com/HCZmNVz/image-148.png"
+  },
+  {
+    "id": 13,
+    "category": "Rocking chair",
+    "chairName": "Rustic Rocking Chair",
+    "price": 229.99,
+    "discountPrice": 189.99,
+    "discountPercent": 17,
+    "description": "Rustic wooden rocking chair with a charming country style.",
+    "image": "https://i.ibb.co.com/6W6D48k/image-147.png"
+  },
+  {
+    "id": 19,
+    "category": "Rocking chair",
+    "chairName": "Traditional Wooden Rocking Chair",
+    "price": 149.99,
+    "discountPrice": 119.99,
+    "discountPercent": 20,
+    "description": "A traditional rocking chair made from high-quality wood with a smooth rocking motion.",
+    "image": "https://i.ibb.co.com/dG9Qk3k/rocking-chair-with-padded-seat-1.png"
+  },
+  {
+    "id": 16,
+    "category": "Rocking chair",
+    "chairName": "Modern Minimalist Rocking Chair",
+    "price": 219.99,
+    "discountPrice": 179.99,
+    "discountPercent": 18,
+    "description": "A minimalist rocking chair with a contemporary design and smooth motion.",
+    "image": "https://i.ibb.co.com/CVRBK76/image-146.png"
+  },
+  {
+    "id": 10,
+    "category": "Rocking chair",
+    "chairName": "Cozy Padded Rocking Chair",
+    "price": 189.99,
+    "discountPrice": 149.99,
+    "discountPercent": 21,
+    "description": "Padded rocking chair with a cozy feel and smooth rocking motion.",
+    "image": "https://example.com/images/rocking-chair4.jpg"
+  },
+  {
+    "id": 2,
+    "category": "Side chair",
+    "chairName": "Modern Upholstered Side Chair",
+    "price": 129.99,
+    "discountPrice": 99.99,
+    "discountPercent": 23,
+    "description": "A sleek, modern side chair with plush upholstery and sturdy legs for extra comfort and style.",
+    "image": "https://example.com/images/side-chair1.jpg"
+  },
+  {
+    "id": 3,
+    "category": "Lounge chair",
+    "chairName": "Luxury Leather Lounge Chair",
+    "price": 499.99,
+    "discountPrice": 399.99,
+    "discountPercent": 20,
+    "description": "A premium leather lounge chair with deep cushions and a reclining feature for ultimate relaxation.",
+    "image": "https://example.com/images/lounge-chair1.jpg"
+  },
+
+  {
+    "id": 5,
+    "category": "Side chair",
+    "chairName": "Scandinavian Side Chair",
+    "price": 189.99,
+    "discountPrice": 149.99,
+    "discountPercent": 21,
+    "description": "Minimalistic Scandinavian design side chair with wooden legs and fabric upholstery.",
+    "image": "https://example.com/images/side-chair2.jpg"
+  },
+  {
+    "id": 6,
+    "category": "Lounge chair",
+    "chairName": "Comfort Recliner Lounge Chair",
+    "price": 549.99,
+    "discountPrice": 449.99,
+    "discountPercent": 18,
+    "description": "Reclining lounge chair with soft leather upholstery and an adjustable footrest for maximum comfort.",
+    "image": "https://example.com/images/lounge-chair2.jpg"
+  },
+
+  {
+    "id": 8,
+    "category": "Side chair",
+    "chairName": "Wooden Side Chair with Cushion",
+    "price": 159.99,
+    "discountPrice": 119.99,
+    "discountPercent": 25,
+    "description": "Sturdy wooden side chair with a comfortable cushion and classic design.",
+    "image": "https://example.com/images/side-chair3.jpg"
+  },
+  {
+    "id": 9,
+    "category": "Lounge chair",
+    "chairName": "Ergonomic Mesh Lounge Chair",
+    "price": 299.99,
+    "discountPrice": 249.99,
+    "discountPercent": 17,
+    "description": "Lounge chair with breathable mesh and ergonomic design for long hours of comfort.",
+    "image": "https://example.com/images/lounge-chair3.jpg"
+  },
+
+  {
+    "id": 11,
+    "category": "Side chair",
+    "chairName": "Classic Wooden Side Chair",
+    "price": 99.99,
+    "discountPrice": 79.99,
+    "discountPercent": 20,
+    "description": "A simple and durable wooden side chair with a timeless design.",
+    "image": "https://example.com/images/side-chair4.jpg"
+  },
+  {
+    "id": 12,
+    "category": "Lounge chair",
+    "chairName": "Sleek Modern Lounge Chair",
+    "price": 599.99,
+    "discountPrice": 499.99,
+    "discountPercent": 17,
+    "description": "A sleek modern lounge chair with a contemporary design and plush seating.",
+    "image": "https://example.com/images/lounge-chair4.jpg"
+  },
+
+  {
+    "id": 14,
+    "category": "Side chair",
+    "chairName": "Upholstered Side Chair",
+    "price": 149.99,
+    "discountPrice": 119.99,
+    "discountPercent": 20,
+    "description": "Upholstered side chair with a comfortable cushion and elegant frame.",
+    "image": "https://example.com/images/side-chair5.jpg"
+  },
+  {
+    "id": 15,
+    "category": "Lounge chair",
+    "chairName": "Chic Fabric Lounge Chair",
+    "price": 349.99,
+    "discountPrice": 299.99,
+    "discountPercent": 14,
+    "description": "A chic lounge chair with fabric upholstery and a comfortable recline feature.",
+    "image": "https://example.com/images/lounge-chair5.jpg"
+  },
+
+  {
+    "id": 17,
+    "category": "Side chair",
+    "chairName": "Retro Metal Side Chair",
+    "price": 89.99,
+    "discountPrice": 69.99,
+    "discountPercent": 22,
+    "description": "A retro metal side chair with a vibrant finish and durable frame.",
+    "image": "https://example.com/images/side-chair6.jpg"
+  },
+  {
+    "id": 18,
+    "category": "Lounge chair",
+    "chairName": "Leather Reclining Lounge Chair",
+    "price": 499.99,
+    "discountPrice": 449.99,
+    "discountPercent": 10,
+    "description": "Luxurious leather reclining lounge chair with adjustable settings and ergonomic support.",
+    "image": "https://example.com/images/lounge-chair6.jpg"
+  },
+
+  {
+    "id": 20,
+    "category": "Side chair",
+    "chairName": "Contemporary Plastic Side Chair",
+    "price": 59.99,
+    "discountPrice": 49.99,
+    "discountPercent": 17,
+    "description": "Durable plastic side chair with a modern design, perfect for indoor and outdoor use.",
+    "image": "https://example.com/images/side-chair7.jpg"
+  }
+]

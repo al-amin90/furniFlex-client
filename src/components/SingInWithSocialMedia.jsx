@@ -1,5 +1,17 @@
+import { useNavigate } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
+
 const SingInWithSocialMedia = () => {
-  const loginSocial = () => {};
+  const {loginWithGoogle} = useAuth()
+  const navigate = useNavigate();
+
+  const loginSocial = () => {
+    loginWithGoogle()
+    .then(result => {
+      console.log(result.user);
+      navigate("/products")
+    })
+  };
 
   return (
     <div className="min-w-full flex mt-6 items-center flex-wrap md:flex-nowrap gap-4 mb-4">

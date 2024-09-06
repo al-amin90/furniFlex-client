@@ -2,13 +2,52 @@ import bgImg from "../assets/authontication.png";
 import logo from "../assets/authLogo.png";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SingInWithSocialMedia from "../components/SingInWithSocialMedia";
+import useAuth from "../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 const SingUp = () => {
   const [isShowed, setIsShowed] = useState(true);
+  const { createUser ,updateUserProfile, setLoading} = useAuth();
+  const navigate = useNavigate()
 
-  const handleSignUp = () => {};
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const from = e.target;
+    const fristName = from.firstName.value;
+    const secondName = from.secondName.value;
+    const email = from.email.value;
+    const password = from.password.value;
+    const fullName = fristName + " " + secondName;
+    console.log(fullName, email, password);
+
+    try {
+
+      // crete user
+      createUser(email, password)
+        .then((result) => {
+          updateUserProfile(fullName)
+          .then(() => {
+            toast.success("Sign Up Successfully", {
+              style: {
+                background: "#2B3440",
+                color: "#fff",
+              },
+            });
+            navigate("/products");
+          })
+          
+
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      setLoading(false);
+      console.log(error.message);
+    }
+  };
 
   return (
     <div className="flex md:flex-row flex-col">
@@ -39,7 +78,7 @@ const SingUp = () => {
                       <div className="w-full">
                         <fieldset className="border bg-white border-solid border-gray-300 p-2 w-full rounded">
                           <p className="text-sm md:text-base text-gray-500">
-                          First name (optional)
+                            First name (optional)
                           </p>
                           <input
                             type="firstName"
@@ -53,7 +92,7 @@ const SingUp = () => {
                       <div className="w-full">
                         <fieldset className="border bg-white border-solid border-gray-300 p-2 w-full rounded">
                           <p className="text-sm md:text-base text-gray-500">
-                          First name (optional)
+                            First name (optional)
                           </p>
                           <input
                             type="secondName"
@@ -68,7 +107,9 @@ const SingUp = () => {
 
                     <div>
                       <fieldset className="border bg-white border-solid border-gray-300 p-2 w-full rounded">
-                        <p className="text-sm md:text-base text-gray-500">Email address</p>
+                        <p className="text-sm md:text-base text-gray-500">
+                          Email address
+                        </p>
                         <input
                           type="email"
                           name="email"
@@ -80,7 +121,9 @@ const SingUp = () => {
                     </div>
                     <div>
                       <fieldset className="border relative border-solid border-gray-300 p-2 w-full rounded">
-                        <p className="text-sm md:text-base text-gray-500">Password</p>
+                        <p className="text-sm md:text-base text-gray-500">
+                          Password
+                        </p>
                         <input
                           type={isShowed ? "password" : "text"}
                           name="password"
@@ -119,7 +162,10 @@ const SingUp = () => {
                       </label>
                     </div>
 
-                    <button className="py-4 w-full hover:shadow-xl px-5 text-lg text-white bg-black rounded-md">
+                    <button
+                      type="submit"
+                      className="py-4 w-full hover:shadow-xl px-5 text-lg text-white bg-black rounded-md"
+                    >
                       Signup
                     </button>
 

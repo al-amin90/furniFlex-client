@@ -2,13 +2,45 @@ import bgImg from "../assets/authontication.png";
 import logo from "../assets/authLogo.png";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SingInWithSocialMedia from "../components/SingInWithSocialMedia";
+import useAuth from "../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 const SingIn = () => {
   const [isShowed, setIsShowed] = useState(true);
+  const { loginUser ,setLoading} = useAuth();
+  const navigate = useNavigate();
 
-  const handleSignIn = () => {};
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const from = e.target;
+    const email = from.email.value;
+    const password = from.password.value;
+
+    try {
+      loginUser(email, password)
+        .then(() => {
+          setLoading(false);
+          toast.success("Login Successfully", {
+            style: {
+              background: "#2B3440",
+              color: "#fff",
+            },
+          });
+          navigate("/products");
+        })
+        .catch((error) => {
+          setLoading(false);
+          toast.error(error.message);
+        });
+    } catch (err) {
+      //   console.log(err);
+      toast.error(err.message);
+      console.log(err);
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="flex md:flex-row flex-col-reverse">
@@ -28,10 +60,15 @@ const SingIn = () => {
                     </p>
                   </div>
 
-                  <form onSubmit={handleSignIn} className="space-y-3 mt-4 w-full ">
+                  <form
+                    onSubmit={handleSignIn}
+                    className="space-y-3 mt-4 w-full "
+                  >
                     <div>
                       <fieldset className="border bg-white border-solid border-gray-300 p-2 w-full rounded">
-                        <p className="text-sm md:text-base text-gray-500">Email address</p>
+                        <p className="text-sm md:text-base text-gray-500">
+                          Email address
+                        </p>
                         <input
                           type="email"
                           name="email"
@@ -43,7 +80,9 @@ const SingIn = () => {
                     </div>
                     <div>
                       <fieldset className="border relative border-solid border-gray-300 p-2 w-full rounded">
-                        <p className="text-sm md:text-base text-gray-500">Password</p>
+                        <p className="text-sm md:text-base text-gray-500">
+                          Password
+                        </p>
                         <input
                           type={isShowed ? "password" : "text"}
                           name="password"
@@ -64,12 +103,22 @@ const SingIn = () => {
                       </fieldset>
                     </div>
                     <div className="flex justify-end">
-                        <p className="text-[#1E99F5] text-sm md:text-base">Forgot Password</p>
+                      <p className="text-[#1E99F5] text-sm md:text-base">
+                        Forgot Password
+                      </p>
                     </div>
 
                     <div className="flex gap-3 -mt-2 text-black">
-                        <input type="checkbox" className="input-accent" name="check" id="check" />
-                          <label htmlFor="check" className="text-sm md:text-base">I agree to the <span className="underline">Terms & Policy</span></label>
+                      <input
+                        type="checkbox"
+                        className="input-accent"
+                        name="check"
+                        id="check"
+                      />
+                      <label htmlFor="check" className="text-sm md:text-base">
+                        I agree to the{" "}
+                        <span className="underline">Terms & Policy</span>
+                      </label>
                     </div>
 
                     <button className="py-4 w-full hover:shadow-xl px-5 text-lg text-white bg-black rounded-md">
@@ -78,14 +127,14 @@ const SingIn = () => {
 
                     <div className="  border-b text-center">
                       <div className="leading-none text-black px-2 inline-block text-sm md:text-base bg-white tracking-wide font-medium  transform translate-y-3/4">
-                        or 
+                        or
                       </div>
                     </div>
                   </form>
                   <SingInWithSocialMedia></SingInWithSocialMedia>
 
                   <div className="text-black/90 text-center font-semibold text-sm md:text-base">
-                  Have an account?
+                    Have an account?
                     <Link
                       to="/singUp"
                       className=" font-medium ml-1 text-[#0F3DDE]"
