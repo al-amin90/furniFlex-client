@@ -2,10 +2,13 @@ import { Link } from "react-router-dom";
 import NavItem from "../../components/NavItem";
 import shop from "../../assets/shop.png";
 import useAuth from "../../Hooks/useAuth";
-import userimg from "../../assets/user.png"
+import userimg from "../../assets/user.png";
+import { useContext } from "react";
+import { CartContext } from "../../Providers/CartProvider";
 
 const Navbar = () => {
-  const {user} = useAuth();
+  const { user } = useAuth();
+  const { cart } = useContext(CartContext);
 
   const navLink = (
     <ul className="flex flex-col lg:flex-row items-center text-sm lg:gap-4 *:cursor-pointer font-semibold">
@@ -50,16 +53,20 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">{navLink}</div>
         <div className="navbar-end">
           <Link to="/carts">
-            <img className="w-6 md:w-fit" src={shop} alt="" />
+            <div className="relative">
+              <img className="w-6 md:w-9" src={shop} alt="" />
+              <p className="absolute bottom-0 right-[5px] font-semibold text-xs text-white">{cart.length}</p>
+            </div>
           </Link>
           {user ? (
             <>
               <div className="avatar ml-4 cursor-pointer">
                 <div className="w-10  rounded-full">
-                 
-                  {
-                    user?.photoURL ?  <img src={user?.photoURL} /> :  <img src={userimg} />
-                  }
+                  {user?.photoURL ? (
+                    <img src={user?.photoURL} />
+                  ) : (
+                    <img src={userimg} />
+                  )}
                 </div>
               </div>
             </>

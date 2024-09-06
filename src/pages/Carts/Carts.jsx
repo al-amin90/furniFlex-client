@@ -3,8 +3,13 @@ import chair from "../../assets/image 146.png";
 import { GoPlus } from "react-icons/go";
 import { PiMinusLight } from "react-icons/pi";
 import { Button } from "@material-tailwind/react";
+import Cart from "../../components/Cart";
+import { useContext } from "react";
+import { CartContext } from "../../Providers/CartProvider";
 
 const Carts = () => {
+  const {cart} = useContext(CartContext)
+
   return (
     <div className="border-t mt-5 mb-24">
       <div className="max-w-[1440px] pt-9 mx-auto ">
@@ -17,68 +22,15 @@ const Carts = () => {
 
             {/* single cards */}
             <div className="mt-9 flex flex-col gap p-6 bg-[#FAFAFA] rounded-xl">
-              <div className="flex  gap-4 justify-between">
-                <div className="flex gap-5">
-                  <div className=" flex flex-col md:flex-row items-center gap-3">
-                    <div className="flex gap-1 border py-3 px-2 rounded-lg items-center">
-                      <button>
-                        <PiMinusLight className="text-3xl ml-auto cursor-pointer text-[#939393]" />
-                      </button>
-                      <h5 className="font-semibold text-xl text-black">1</h5>
-                      <button>
-                        <GoPlus className="text-3xl ml-auto cursor-pointer text-[#939393]" />
-                      </button>
-                    </div>
-                    <div>
-                      <img
-                        src={chair}
-                        className="w-24 h-2w-24 p-2 bg-[#EAEAEA] rounded-md border"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <h3 className="text-base justify-start items-start font-bold text-[#434343]">
-                    Recliner Chair Steel
-                  </h3>
-                </div>
-                <div className=" flex flex-col justify-between">
-                  <GoPlus className="rotate-45 text-3xl ml-auto cursor-pointer text-[#939393]" />
-                  <p className="font-semibold text-xl text-black">€299.00</p>
-                </div>
-              </div>
+         
+              {
+                cart?.map((c, idx) => <Cart key={idx} c={c} idx={idx} length={cart.length}/>)
+              }
+             
 
-              <div className="divider border-none border-[#F4F4F4] my-5"></div>
+             
 
-              {/* 2 card */}
-              <div className="flex  gap-4 justify-between">
-                <div className="flex gap-5">
-                  <div className=" flex flex-col md:flex-row items-center gap-3">
-                    <div className="flex gap-1 border py-3 px-2 rounded-lg items-center">
-                      <button>
-                        <PiMinusLight className="text-3xl ml-auto cursor-pointer text-[#939393]" />
-                      </button>
-                      <h5 className="font-semibold text-xl text-black">1</h5>
-                      <button>
-                        <GoPlus className="text-3xl ml-auto cursor-pointer text-[#939393]" />
-                      </button>
-                    </div>
-                    <div>
-                      <img
-                        src={chair}
-                        className="w-24 h-2w-24 p-2 bg-[#EAEAEA] rounded-md border"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <h3 className="text-base justify-start items-start font-bold text-[#434343]">
-                    Recliner Chair Steel
-                  </h3>
-                </div>
-                <div className=" flex flex-col justify-between">
-                  <GoPlus className="rotate-45 text-3xl ml-auto cursor-pointer text-[#939393]" />
-                  <p className="font-semibold text-xl text-black">€299.00</p>
-                </div>
-              </div>
+           
             </div>
           </div>
 

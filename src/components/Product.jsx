@@ -7,9 +7,13 @@ import {
   Button,
 } from "@material-tailwind/react";
 import PropTypes from 'prop-types';
+import { useContext } from "react";
+import { CartContext } from "../Providers/CartProvider";
 
 const Product = ({p}) => {
+  const {addCart}  = useContext(CartContext)
     const {chairName,description,discountPercent,discountPrice ,image, price} = p;
+
   return (
     <div>
       <Card className="p-1 rounded-2xl border">
@@ -40,12 +44,13 @@ const Product = ({p}) => {
             color="gray"
             className="font-normal my-3 opacity-75"
           >
-            {description.slice(0, 70)}
+            {description.slice(0, 60)}
           </Typography>
         </CardBody>
         <CardFooter className="pt-0">
           <Button
             fullWidth={true}
+            onClick={() => addCart(p)}
             className="bg-[#202020] flex items-center justify-center gap-2 capitalize text-base text-white shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
           >
             <svg

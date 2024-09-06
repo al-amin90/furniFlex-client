@@ -6,11 +6,13 @@ const Products = () => {
   const [category, setCategory] = useState("Rocking chair");
   const [products, setProducts] = useState([]);
 
+
   useEffect(() => {
     axios.get("/Product.json") 
     .then((res) => setProducts(res.data))
  
   }, [])
+
 
   const categorys = ["Rocking chair", "Side chair", "Lounge chair"];
   return (
