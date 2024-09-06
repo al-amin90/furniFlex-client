@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 const SingInWithSocialMedia = () => {
   const {loginWithGoogle} = useAuth()
@@ -9,6 +10,12 @@ const SingInWithSocialMedia = () => {
     loginWithGoogle()
     .then(result => {
       console.log(result.user);
+      toast.success("Login Successfully", {
+        style: {
+          background: "#2B3440",
+          color: "#fff",
+        },
+      });
       navigate("/products")
     })
   };

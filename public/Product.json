@@ -1,15 +1,5 @@
 [
   {
-    "id": 1,
-    "category": "Rocking chair",
-    "chairName": "Classic Wooden Rocking Chair",
-    "price": 199.99,
-    "discountPrice": 159.99,
-    "discountPercent": 20,
-    "description": "A beautifully crafted wooden rocking chair with a smooth gliding motion, perfect for relaxing.",
-    "image": "https://i.ibb.co.com/z4RRCvP/Frame-4.png"
-  },
-  {
     "id": 4,
     "category": "Rocking chair",
     "chairName": "Vintage Rocking Chair",
@@ -42,7 +32,7 @@
   {
     "id": 19,
     "category": "Rocking chair",
-    "chairName": "Traditional Wooden Rocking Chair",
+    "chairName": "Traditional Wooden Rocking",
     "price": 149.99,
     "discountPrice": 119.99,
     "discountPercent": 20,
@@ -50,9 +40,19 @@
     "image": "https://i.ibb.co.com/dG9Qk3k/rocking-chair-with-padded-seat-1.png"
   },
   {
+    "id": 1,
+    "category": "Rocking chair",
+    "chairName": "Classic Wooden Rocking Chair",
+    "price": 199.99,
+    "discountPrice": 159.99,
+    "discountPercent": 20,
+    "description": "A beautifully crafted wooden rocking chair with a smooth gliding motion, perfect for relaxing.",
+    "image": "https://i.ibb.co.com/z4RRCvP/Frame-4.png"
+  },
+  {
     "id": 16,
     "category": "Rocking chair",
-    "chairName": "Modern Minimalist Rocking Chair",
+    "chairName": "Modern Minimalist Rocking",
     "price": 219.99,
     "discountPrice": 179.99,
     "discountPercent": 18,
