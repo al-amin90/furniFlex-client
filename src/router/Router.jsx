@@ -3,7 +3,8 @@ import Main from "../layout/Main";
 import SingIn from "../authontication/SingIn";
 import SingUp from "../authontication/SingUp";
 import Products from "../pages/Products/Products";
-import Cart from "../pages/Cart/Cart";
+import Carts from "../pages/Carts/Carts";
+
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/carts",
-            element: <Cart/>
+            element: <Carts/>
         },
 
     ]

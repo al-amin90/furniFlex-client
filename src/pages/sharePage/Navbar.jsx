@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import NavItem from "../../components/NavItem";
-import shop from "../../assets/shop.png"
+import shop from "../../assets/shop.png";
 
 const Navbar = () => {
-const user = null;
+  const user = null;
 
   const navLink = (
     <ul className="flex flex-col lg:flex-row items-center text-sm lg:gap-4 *:cursor-pointer font-semibold">
@@ -17,7 +17,7 @@ const user = null;
 
   return (
     <div className="max-w-[1440px] mx-auto lg:w-[85%]">
-      <div className="navbar mt-4">
+      <div className="navbar p-0 mt-5">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,12 +47,12 @@ const user = null;
         </div>
         <div className="navbar-center hidden lg:flex">{navLink}</div>
         <div className="navbar-end">
-          <img className="w-6 md:w-fit" src={shop} alt="" />
+          <Link to="/carts">
+            <img className="w-6 md:w-fit" src={shop} alt="" />
+          </Link>
           {user ? (
             <>
-              <div
-                className="avatar cursor-pointer"
-              >
+              <div className="avatar cursor-pointer">
                 <div className="w-9  rounded-full">
                   <img src={user?.photoURL} />
                 </div>

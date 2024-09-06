@@ -13,8 +13,8 @@ const Products = () => {
 
   const categorys = ["Rocking chair", "Side chair", "Lounge chair"];
   return (
-    <div className="border-t mt-5">
-      <div className="max-w-[1440px] pt-16 mx-auto lg:w-[85%] flex gap-11">
+    <div className="border-t mt-5 mb-24">
+      <div className="max-w-[1440px] pt-5 md:pt-16 mx-auto px-6 lg:px-0 lg:w-[85%] flex flex-col lg:flex-row gap-11">
         {/* category part */}
         <div className="text-lg w-80 font-semibold pt-9 pr-7 border-r *:w-full *:cursor-pointer">
           {categorys.map((c, idx) => (
