@@ -3,7 +3,7 @@ import { PiMinusLight } from "react-icons/pi";
 import useCart from "../Hooks/useCart";
 
 const Cart = ({ c, idx, length }) => {
-  const { image, id, chairName, quantity } = c;
+  const { image, id, discountPrice, chairName, quantity } = c;
   const { deleteCart , updateQuantityOfProduct} = useCart();
 
   return (
@@ -37,7 +37,7 @@ const Cart = ({ c, idx, length }) => {
             onClick={() => deleteCart(id)}
             className="rotate-45 text-3xl ml-auto cursor-pointer text-[#939393]"
           />
-          <p className="font-semibold text-xl text-black">€299.00</p>
+          <p className="font-semibold text-xl text-black">€{discountPrice}</p>
         </div>
       </div>
 

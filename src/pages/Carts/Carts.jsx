@@ -8,7 +8,8 @@ import { useContext } from "react";
 import { CartContext } from "../../Providers/CartProvider";
 
 const Carts = () => {
-  const {cart} = useContext(CartContext)
+  const {cart, grandTotal} = useContext(CartContext)
+
 
   return (
     <div className="border-t mt-5 mb-24">
@@ -41,7 +42,7 @@ const Carts = () => {
               <div className="text-lg w-full md:w-80 mb-4 p-5 font-semibold mt-9  bg-[#FAFAFA] border rounded-xl *:w-full">
                 <div className="flex justify-between text-[#656565] font-normal text-lg">
                   <h5>Subtotal</h5>
-                  <p>€ 1071.00</p>
+                  <p>€ {grandTotal.toFixed(2)}</p>
                 </div>
                 <div className="flex mt-2 justify-between text-[#656565] font-normal text-lg">
                   <h5>Shipping</h5>
@@ -52,14 +53,14 @@ const Carts = () => {
                     Estimated Tax{" "}
                     <HiOutlineInformationCircle className="text-xl" />
                   </h5>
-                  <p>€ -</p>
+                  <p>€ 0</p>
                 </div>
                 <div>
                   <div className="flex mt-1 pt-4 justify-between text-[#656565] font-semibold text-xl">
                     <h5 className="flex text-[#656565] items-center gap-2">
                       Total
                     </h5>
-                    <p className="text-black">€ 1071.00</p>
+                    <p className="text-black">€ {grandTotal.toFixed(2)}</p>
                   </div>
                 </div>
               </div>
